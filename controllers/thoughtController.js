@@ -53,15 +53,15 @@ module.exports = {
         !thought
           ? res.status(404).json({ message: 'No thought with this ID'})
           : User.findOneAndUpdate(
-              { thoughts: req.params.thoughtId },
-              {$pull: { thoughts: req.params.thoughtId }},
+              { thoughts: { _id: req.params.thoughtId }},
+              {$pull: { thoughts: {_id: req.params.thoughtId }}},
               { new: true }
           )
       )
       .then((user) => 
         !user
-          ? res.status(404).json({message: 'Thought created but no user with this ID'})
-          : res.json({ message: 'Thought created successfully'})
+          ? res.status(404).json({message: 'Thought deleted, but no user with this ID'})
+          : res.json({ message: 'Thought deleted successfully'})
       )
       .catch((err) => res.status(500).json(err));
   },
@@ -81,7 +81,7 @@ module.exports = {
   removeReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: { reactionId: req.params.reactionId }}},
+      { $pull: { reactions: { _id: req.params.reactionId }}},
       { new: true }
     )
     .then((thought) => 
