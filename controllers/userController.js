@@ -33,7 +33,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   updateUser(req, res) {
-    User.findByIdAndUpdate( req.params.userId, req.body, { new: true })
+    User.findByIdAndUpdate( req.params.userId, req.body, { runValidators: true, new: true })
       .then((dbUserData) => res.json(dbUserData))
       .catch((err) => res.status(500).json(err));
   },

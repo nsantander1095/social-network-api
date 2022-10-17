@@ -31,7 +31,7 @@ module.exports = {
         return User.findOneAndUpdate(
           { username: req.body.username },
           { $addToSet: { thoughts: thought._id }},
-          { new: true }
+          { runValidators: true, new: true }
         );
       })
       .then((user) => 
@@ -45,7 +45,7 @@ module.exports = {
       });
   },
   updateThought(req, res) {
-    Thought.findByIdAndUpdate( req.params.thoughtId, req.body, { new: true })
+    Thought.findByIdAndUpdate( req.params.thoughtId, req.body, { runValidators: true, new: true })
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => res.status(500).json(err));
   },
@@ -57,7 +57,7 @@ module.exports = {
           : User.findOneAndUpdate(
               { thoughts: { _id: req.params.thoughtId }},
               {$pull: { thoughts: {_id: req.params.thoughtId }}},
-              { new: true }
+              { runValidators: true, new: true }
           )
       )
       .then((user) => 
@@ -71,7 +71,7 @@ module.exports = {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $addToSet: { reactions: req.body }},
-      { new: true }
+      { runValidators: true, new: true }
     )
     .then((thought) =>
       !thought
@@ -84,7 +84,7 @@ module.exports = {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $pull: { reactions: { _id: req.params.reactionId }}},
-      { new: true }
+      { runValidators: true, new: true }
     )
     .then((thought) => 
       !thought
