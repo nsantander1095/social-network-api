@@ -20,6 +20,8 @@ This project consisited of building a rest API from scratch using Express.js for
 * Can post reactions to thoughts 
 * Can delete a reaction to a thought by the thought ID and the reaction ID
 
+Side note: There is a file for seeds but the app does not currently have the functionality to seed.
+
 ## Visuals
 
-To see a full walkthrough of how to initialize and operate the application, please follow this [link]().
+To see a full walkthrough of how to initialize and operate the application, please follow this [link](https://drive.google.com/file/d/1pp1G6T3B3UDAieZWQ4R_VhJ1ixykCVhE/view?usp=sharing).
