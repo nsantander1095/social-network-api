@@ -10,7 +10,7 @@
 
 ## Description
 
-This project consisited of building a rest API from scratch using Express.js for routing, a MongoDB database, and the Mogoose ODM. A full video walkthrough is provided in the [visuals](#visuals) section, however the API has the following functionality:
+This social network API is a fully functional REST API built from scratch using Express.js for routing, a MongoDB database, and the Mogoose ODM. The API is meant to handle most of the functionality that todays modern social networks employ. A full video walkthrough is provided in the [visuals](#visuals) section, however the API has the following functionality:
 
 * Can create a new user
 * Can get a list of all users or a user by its ID
@@ -28,9 +28,9 @@ Side note: There is a file for seeds but the app does not currently have the fun
 
 * JavaScript
 * Node.js
-* Express.js for routing
-* MonogDB database
-* Mongoose ODM
+* Express.js
+* MonogDB
+* Mongoose
 
 ## Visuals
 
