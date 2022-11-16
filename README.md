@@ -1,8 +1,10 @@
-# Social Network API Project
+# Social Network API
 
 ## Table of Contents
 
 * [Description](#description)
+
+* [Technologies](#technologies)
 
 * [Visuals](#visuals)
 
@@ -21,6 +23,14 @@ This project consisited of building a rest API from scratch using Express.js for
 * Can delete a reaction to a thought by the thought ID and the reaction ID
 
 Side note: There is a file for seeds but the app does not currently have the functionality to seed.
+
+## Technologies 
+
+* JavaScript
+* Node.js
+* Express.js for routing
+* MonogDB database
+* Mongoose ODM
 
 ## Visuals
 
