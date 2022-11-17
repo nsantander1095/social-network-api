@@ -34,4 +34,4 @@ Side note: There is a file for seeds but the app does not currently have the fun
 
 ## Visuals
 
-To see a full walkthrough of how to initialize and operate the application, please follow this [link](https://drive.google.com/file/d/1pp1G6T3B3UDAieZWQ4R_VhJ1ixykCVhE/view?usp=sharing). Please note that since the entire functionality is that of a REST API, all routes are tested in Insomnia in the video.
+To see a full walkthrough of how to initialize and operate the application, please follow this [link](https://drive.google.com/file/d/1pp1G6T3B3UDAieZWQ4R_VhJ1ixykCVhE/view?usp=sharing). Please note that since the entire functionality is that of a REST API, all routes are tested in Insomnia after the server has been started by invoking nodemon in the video.
